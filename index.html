@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TinDog</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link href="css/style.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>          
+  <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700&display=swap' rel='stylesheet'>
+</head>
+
+<body>
+<!-- Header -->
+<section id="header">
+  <header id="nav-menu" aria-label="navigation bar">
+    <div class="container">
+
+      <div class="nav-start">
+        <a class="logo" href="/">
+          <img src="https://github.com/Evavic44/responsive-navbar-with-dropdown/blob/main/assets/images/logo.png?raw=true" 
+            width="35" 
+            height="35" 
+            alt="Inc Logo"
+          />
+        </a>
+
+        <nav class="menu">
+          <ul class="menu-bar">
+            <li><a class="nav-link" href="/">Home</a></li>
+            <li>
+              <button
+              class="nav-link dropdown-btn"
+              data-dropdown="dropdown1"
+              aria-expanded="false"
+              aria-label="browse"
+              >
+                Find out more
+                <i class="bx bx-chevron-down" aria-hidden="true"></i>
+              </button>
+
+              <div id="dropdown1" class="dropdown">
+                <ul role="menu">
+                  <li role="menuitem">
+                    <a class="dropdown-link">
+                      <div>
+                        <p class="nav-link">Industries</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-link">
+                      <div>
+                        <p class="nav-link">Testimonials</p>
+                      </div>
+                    </a>
+                    <a class="dropdown-link">
+                      <div>
+                        <p class="nav-link">Find out more</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+            </li>
+            <li>
+              <button
+              class="nav-link dropdown-btn"
+              data-dropdown="dropdown2"
+              aria-expanded="false"
+              aria-label="browse"
+              >
+                  Discover
+                  <i class="bx bx-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div id="dropdown2" class="dropdown">
+                  <ul role="menu">
+                      <li role="menuitem">
+                        <a class="dropdown-link">
+                          <div>
+                            <span class="dropdown-link-title">Software</span>
+                            <a class="nav-link">Frontend</a>
+                            <a class="nav-link">Backend</a>
+                            <a class="nav-link">Mobile App Development</a>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-link">
+                          <div>
+                            <span class="dropdown-link-title">Robotic Process Automation</span>
+                          
+                          </div>
+                        </a>
+                      </li>
+                          
+                      <li>
+                        <a class="dropdown-link">
+                          <!-- <img src="./assets/icons/botd.svg" class="icon" /> -->
+                          <div>
+                            <h6 class="dropdown-link-title">Cloud Computing</h6>
+                            <p>Build in AWS</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-link">
+                          <div>
+                            <h6 class="dropdown-link-title">Data Science</h6>
+                          
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                          
+                      </li>
+                      
+                  </ul>
+              </div>
+          </li>
+          
+          <li><a class="nav-link" href="/">Say Hello</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="nav-end">
+        <div class="right-container">
+            <form class="search" role="search">
+                <input type="search" name="search" placeholder="Search"/>
+            </form>
+        </div>
+      </div>
+    </div>
+  </header>
+</section>
+
+<div class="container-1">
+  <div class="overlay-card fade" >
+    
+    
+    <div class="oval-previous">
+      <a onclick="plusSlides(-1)"><i class="previous"></i></a>
+    </div>
+    <div class="oval-next">
+      <a onclick="plusSlides(1)"><i class="next"></i></a>
+    </div>
+    <img src="../images/michal-kmet-M9O6GRrEEDY-unsplash.jpg" >
+    <div class="overlay-text">
+      <h1>Build with AWS, Azure and GCP</h1>
+      <p>The next generation in AI, Data Science and Blockchain in the cloud.</p>
+      <p></p>
+      <button>Find out <i class="arrow"></i></button>
+    </div>
+    
+  </div>
+  <div class="overlay-card fade" >
+    
+    
+    <div class="oval-previous">
+      <a onclick="plusSlides(-1)"><i class="previous"></i></a>
+    </div>
+    <div class="oval-next">
+      <a onclick="plusSlides(1)"><i class="next"></i></a>
+    </div>
+    <img src="../images/thomas-morse-cuKKa0vWZSY-unsplash.jpg" >
+    <div class="overlay-text">
+      <h1>Build with AWS, Azure and GCP</h1>
+      <p>The next generation in AI, Data Science and Blockchain in the cloud.</p>
+      <p></p>
+      <button>Find out <i class="arrow"></i></button>
+    </div>
+    
+  </div>
+  <div class="overlay-card fade" >
+    
+    
+    <div class="oval-previous">
+      <a onclick="plusSlides(-1)"><i class="previous"></i></a>
+    </div>
+    <div class="oval-next">
+      <a onclick="plusSlides(1)"><i class="next"></i></a>
+    </div>
+    <img src="../images/daniela-cuevas-t7YycgAoVSw-unsplash.jpg" >
+    <div class="overlay-text">
+      <h1>Build with AWS, Azure and GCP</h1>
+      <p>The next generation in AI, Data Science and Blockchain in the cloud.</p>
+      <p></p>
+      <button>Find out <i class="arrow"></i></button>
+    </div>
+    
+  </div>
+</div>
+
+<div class="container-2">
+  <div class="main-text">
+    <h1>Unlock the power of the internet revolution</h1>
+    <p>Use IoT and Web3 to power your enterprise and gain unwavering trust with your clients and partners.</p>
+  </div>
+  <div class="cards">
+    <div class="card-1">
+      <img src="../images/brooke-cagle-xcgh5_-QIXc-unsplash.jpg" alt="">
+      <h1>Discover</h1>
+      <p>Find out what other customers are saying about our solutions.</p>
+    </div>
+
+    <div class="card-1">
+      <img src="../images/ivana-cajina-_7LbC5J-jw4-unsplash.jpg" alt="">
+      <h1>Lorem Ipsum</h1>
+      <p>Leverage the power of automation with business process orchestration and robotic process automation</p>
+    </div>
+
+    <div class="card-1">
+      <img src="../images/elevate-nYgy58eb9aw-unsplash.jpg" alt="">
+      <h1>Lorem Ipsum</h1>
+      <p>Leverage the power of automation with business process orchestration and robotic process automation</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="container-3">
+  
+  <div class="main-text">
+    <h1>Unlock the Power of the Internet Revolution</h1>
+  </div>
+
+  <span class="circle-lg"></span>
+  <span class="circle-sm"></span>
+
+  <div class="customers">
+    <div class="customer">
+      <h1>Amazon Web Services</h1>
+      <p>We have indepth knowledge and experience with various services offered in AWS. Whether you want 
+        to lift and shift traditional virtual machines powered by VMware or HyperV or start greenfield applications
+        in the cloud. 
+      </p>
+    </div>
+  
+    <div class="customer">
+      <h1>Microsoft Azure</h1>
+      <p>We have the right solution for every customer. Integrate your applications whether hosted on Azure, AWS or GCP with the most trusted
+        Authentication provider in the world, Azure AD. 
+      </p>
+    </div>
+  
+    <div class="customer">
+      <h1>Google Cloud Platform</h1>
+      <p>
+        Power your mobile and gaming applications by building your APIs on Google Cloud. Firebase is the most succesful Backend as a Service (BaaS) 
+        platform for mobile and gaming application developers in the world.
+      </p>
+    </div>
+  </div>
+
+  <div class="container-5">
+
+  </div>
+  
+
+</div>
+  
+<!--
+  <div class="container-4">
+  <div class="card-1">
+    <img src="../images/photo-1638043883373-bb3f45f23033.jpeg" width="100%" height="100%">
+    <h1>Testing </h1>
+        
+  </div>
+  <div class="card-2">
+    <div class="text-background">
+        <h1>WEB DEVELOPMENT</h1>
+    </div>
+  </div>
+    <div class="card-3">
+      <div class="text-background">
+          <h1>MOBILE APP DEVELOPMENT</h1>
+      </div>
+    </div>
+    
+  </div>
+</div>
+--> 
+
+
+
+<div class="footer-container">
+  <div class="column-list">
+    <h1>About Us</h1>
+    <a href="">What We Do</a>
+    <a href="">Our Team</a>
+    <a href="">Careers</a>
+  </div>
+
+  <div class="column-list">
+    <h1>Our Values</h1>
+    <a href="">Inclusion + Diversity</a>
+  </div>
+
+  <div class="column-list">
+    <h1>Tailored Solutions</h1>
+    <a href="">Mobile App Development</a>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>Copyright &copy; 2019 - Simple-software Technologies</p>
+</div>
+
+  <script src="scripts/script.js"></script>  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
+
