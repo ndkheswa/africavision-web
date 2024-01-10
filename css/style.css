@@ -14,7 +14,7 @@
   --light-grey: #F7F7F7; /* #eeeeee */
   --light-blue: #F7F9FC;
   --ash: #f4f4f4;
-  --primary-color: #2b72fb;
+  --primary-color: #F94617;
   --white: white;
   --border: 1px solid var(--light-grey);
   --shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
@@ -108,6 +108,12 @@ button {
   background: var(--white);
 }
 
+@media screen and (max-width: 599px) {
+  .menu {
+    border: none;
+  }
+  
+}
 .menu-bar li:first-child .dropdown {
   flex-direction: initial;
   min-width: 480px;
@@ -153,20 +159,19 @@ button {
 
 .dropdown {
   display: flex;
-  flex-direction: column;
   min-width: 600px;
   background-color: var(--white);
   color: #2C2C2C;
   border-radius: 10px;
   position: absolute;
-  top: 36px;
   z-index: 1;
+  top: 36px;
   visibility: hidden;
   opacity: 0;
   transform: scale(0.97) translateX(-5px);
   transition: 0.1s ease-in-out;
   box-shadow: var(--shadow);
-  background: var(--light-blue);
+  
 }
 
 .dropdown.active {
@@ -242,12 +247,41 @@ button {
   padding: 0.1rem;
   margin-left: 1rem;
   font-size: 1.9rem;
-  color: #F94617;
+  position: relative;
+}
+
+#close {
+  display: none;
 }
 
 @media (max-width: 1100px) {
   #hamburger {
     display: block;
+    color: #F94617;
+    position: relative;
+    z-index: 1;
+  }
+
+  #close {
+    display: none;
+    padding: 0.1rem;
+    margin-left: 1rem;
+    font-size: 1.9rem;
+    color: #F94617;
+    position: relative;
+  }
+
+  #close .close-button {
+    width: 2.0rem;
+    height: 2.0rem;
+  }
+
+  #close.show-close {
+    display: block;
+  }
+
+  #hamburger.close-hamburger {
+    display: none;
   }
 
   .container {
@@ -257,9 +291,8 @@ button {
   .menu {
     display: none;
     position: absolute;
-    top: 87px;
+    top: 5.0rem;
     left: 0;
-    min-height: 100vh;
     width: 100vw;
   }
 
@@ -280,11 +313,13 @@ button {
     opacity: 1;
     transform: none;
     box-shadow: none;
+    border: 1px solid green;
   }
 
   .menu.show,
   .dropdown.active {
     display: block;
+    z-index: 1;
   }
 
   .dropdown ul {
@@ -487,9 +522,64 @@ button {
 .container-2 {
   display: flex;
   position: relative;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
+.container-2 button {
+  position: relative;
+  flex-direction: column;
+  width: 32vw;
+  height: 600px;
+  text-align: left;
+  padding: 0;
+  border: none;
+  margin: 30px 0 30px 0;
+  border-radius: 0%;
+}
+
+.container-2 button .image-container {
+  overflow: hidden;
+
+}
+
+.container-2 button img {
+  object-fit: cover;
+  transition: 0.5s all ease-in-out;
+  width: auto;
+  height: 100vh;
+  max-width: 100%;
+  padding: 0;
+}
+
+.container-2 button img:hover {
+  transform: scale(1.06);
+}
+
+.container-2 button .overlay-text {
+  position: absolute;
+  color: var(--white);
+  padding: 20px;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 80%);
+}
+
+.container-2 .card .overlay-text h1 {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.container-2 .card .overlay-text p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6rem;
+}
+
+.container-2 .card .right-arrow {
+  width: 1.6 rem;
+  height: 1.6rem;
+}
 
 @media only screen and (max-width: 768px) {
   .container-2 {
@@ -501,9 +591,11 @@ button {
     position: relative;
     flex-direction: column;
     width: 100%;
+    height: auto;
     text-align: left;
     padding: 0;
     border: none;
+    margin-top: 0;
     margin-bottom: 30px;
   }
 
@@ -664,54 +756,6 @@ button {
     padding: 20px 0;
     min-height: auto;
   }
-}
-
-.container-4 {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  justify-content: space-between;
-  height: 700px;
-  width: 100%;
-  margin-bottom: 40px;
-}
-
-.container-4 .card-1 {
-  overflow: hidden;
-  transition: 0.5s all ease-in-out;
-  background-position: 0% 40%;
-  background-repeat: no-repeat;
-  width: 32%;
-  color: #2C2C2C;
-  background-color: #fff;
-}
-
-.card-1 img {
-  transition: all 0.5s ease-in-out;
-  width: 100%;
-}
-.card-1 img:hover {
-  transform: scale(1.06);
-  cursor: pointer;
-}
-
-.container-4 .card-1 h1 {
-  position: relative;
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 5px;
-  left: 20px;
-  line-height: 1em;
-}
-.container-4 .card-1 p {
-  position: relative;
-  font-size: 22px;
-  font-weight: 300;
-}
-
-#overlay-text {
-  position: absolute;
-  top: 40px;
 }
 
 .container-4 .card-2 {

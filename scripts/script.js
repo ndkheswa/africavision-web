@@ -2,6 +2,7 @@
 const dropdownBtn = document.querySelectorAll(".dropdown-btn");
 const dropdown = document.querySelectorAll(".dropdown");
 const hamburgerBtn = document.getElementById("hamburger");
+const closeButton = document.getElementById("close");
 const navMenu = document.querySelector(".menu");
 const links = document.querySelectorAll(".dropdown a");
 
@@ -18,10 +19,12 @@ function closeDropdownMenu() {
 
 function toggleHamburger() {
   navMenu.classList.toggle("show");
+  closeButton.classList.toggle("show-close");
+  hamburgerBtn.classList.toggle("close-hamburger");
 }
 
 dropdownBtn.forEach((btn) => {
-  btn.addEventListener("mouseover", function (e) {
+  btn.addEventListener("click", function (e) {
     const dropdownIndex = e.currentTarget.dataset.dropdown;
     const dropdownElement = document.getElementById(dropdownIndex);
 
@@ -61,6 +64,9 @@ document.addEventListener("keydown", (e) => {
     setAriaExpandedFalse();
   }
 });
+
+hamburgerBtn.addEventListener("click", toggleHamburger)
+closeButton.addEventListener("click", toggleHamburger);
 
 let slideIndex = 0;
 showSlides();
